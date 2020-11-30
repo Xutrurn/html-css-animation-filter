@@ -124,6 +124,25 @@
   font-size: 60px;
 }
 
+/* Simile all'icona sopra. On hover questa volta gira in senso orario fino ad arrivare a 3/4 e poi torna indietro velocemente */
+.ex-11-icon:hover {
+  animation: backandforth 2s linear;
+}
+
+@keyframes backandforth {
+  0% {
+    transform: rotate(0);
+  }
+
+  90% {
+    transform: rotate(310deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .ex-12-button, .ex-13-button {
   position: relative;
   display: block;
@@ -145,6 +164,42 @@
   background: #f5f5f5;
   width: 60px;
   height: 20px;
+}
+
+.ex-12-button:hover .ex-12-top-white {
+  animation: move-top-white-space 2s linear;
+}
+
+@keyframes move-top-white-space {
+  0% {
+    transform: translateX(20%);
+  }
+
+  50% {
+    transform: translateX(190%);
+  }
+
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+  animation: move-bottom-white-space 2s linear;
+}
+
+@keyframes move-bottom-white-space {
+  0% {
+    transform: translateX(-20%);
+  }
+
+  50% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(-20%);
+  }
 }
 
 .ex-12-bottom-white, .ex-13-bottom-white {
